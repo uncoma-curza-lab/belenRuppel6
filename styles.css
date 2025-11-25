@@ -1,0 +1,311 @@
+body {
+  background: #5b878a;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding-top: 160px;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #5b878a;
+  z-index: 1000;
+  padding: 20px 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: "Lilita One", sans-serif;
+  letter-spacing: 10px;
+  text-shadow: 2px 2px 0px rgb(131, 180, 236);
+  margin: 0;
+  color: #ffffff;
+}
+
+/*Logo*/
+.logo-curza {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  animation: giro 3s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+@keyframes giro {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+h3 {
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 1.1em;
+  color: #dbe9ff;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 0px rgb(131, 180, 236);
+  opacity: 0.95;
+}
+
+nav {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 8px;               
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 5px 0; 
+}
+
+nav a {
+  color: rgb(23, 5, 75);
+  text-decoration: none;
+  font-weight: normal;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #dbe9ff;
+}
+
+h4 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #003344;
+}
+
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.izquierda {
+  float: left;
+  width: 130px;
+  border-radius: 40%;
+  padding: 5px;
+  border: 1px solid rgb(3, 34, 59);
+  margin-right: 15px; 
+  margin-bottom: 10px; 
+}
+
+.sobre-mi {
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  line-height: 1.5;
+  margin: 20px auto;
+  width: 80%;
+  text-align: justify;
+}
+
+.sobre-mi .sticky {
+  position: sticky;
+  top: 0;
+  background-color: rgba(91, 135, 138, 0.9);
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/*FORMULARIO*/
+form {
+  width: 80%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background-color: #5a8083;
+}
+
+fieldset {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1.5px solid white;
+  border-radius: 8px;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  transform: scale(1.2);
+  accent-color: white;
+  cursor: pointer;
+}
+
+input[type="submit"],
+input[type="button"] {
+  background-color: #2e5f63;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: #1f4446;
+}
+
+/*TABLA*/
+table {
+  border: 1px solid white;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  background-color: rgba(255,255,255,0.1);
+}
+
+table td, table th {
+  border: 1px solid white;
+  padding: 8px;
+}
+
+table th {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+table tr:hover {
+  background: rgba(15, 89, 150, 0.4);
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.subir {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: white;
+  color: #5b878a;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.subir:hover {
+  background-color: #dbe9ff;
+  color: #003344;
+}
+
+/*JUEGO*/
+.titulo-juego {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  color: #003344;
+}
+
+
+.juego {
+  background: rgb(3, 34, 59);
+  padding: 30px 30px;
+  width: 200px;
+  height: 200p;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:#89bdcf;
+  font-weight: bold;
+  text-align: center;
+}
+
+#input-juego {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #eef7f7;
+}
+
+#boton-adivinar {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight:200px;
+  color: #dbe9ff;
+  background: #546c74;
+}
+
+#mensaje-juego {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 1px #275a5d;
+  word-spacing: 0,5px;
+}

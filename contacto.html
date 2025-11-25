@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - Belén Ruppel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a id="top"></a>
+  <header>
+        <h1>
+            BELÉN RUPPEL
+            <img src="logo.png" alt="Logo CURZA" class="logo-curza">
+        </h1>
+        <h3>MI PÁGINA PERSONAL</h3>
+    </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="acercade.html">Acerca de</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="juego.html">Juego</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <form id="form-contacto" action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Información Personal</legend>
+
+        <label for="nombre">Nombre *</label>
+        <input id="nombre" name="nombre" type="text" maxlength="20" required>
+
+        <label for="apellido">Apellido</label>
+        <input id="apellido" name="apellido" type="text" maxlength="20">
+
+        <label for="edad">Edad</label>
+        <input id="edad" name="edad" type="number" min="16" max="120" aria-describedby="edadHelp">
+        <small id="edadHelp">Valor entre 16 y 120</small>
+      </fieldset>
+
+      <fieldset>
+        <legend>Datos de contacto</legend>
+
+        <label for="email">E-mail *</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" name="telefono" type="tel"
+               placeholder="+54 9 2920 572865"
+               onfocus="this.placeholder=''"
+               onblur="this.placeholder='+54 9 2920 572865'">
+        <small>Formato de ejemplo: +54 9 2920 572865</small>
+      </fieldset>
+
+      <fieldset>
+        <legend>Método preferido de contacto</legend>
+
+        <input type="radio" id="metodo_correo" name="metodo_contacto" value="correo_electronico" checked>
+        <label for="metodo_correo">Correo Electrónico</label>
+
+        <input type="radio" id="metodo_telefono" name="metodo_contacto" value="telefono">
+        <label for="metodo_telefono">Teléfono</label>
+
+        <input type="radio" id="metodo_postal" name="metodo_contacto" value="correo_postal">
+        <label for="metodo_postal">Correo Postal</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Dirección</legend>
+
+        <label for="direccion">Dirección</label>
+        <textarea id="direccion" name="direccion" rows="3"></textarea>
+
+        <label for="provincia">Provincia</label>
+        <input id="provincia" name="provincia" list="provincias">
+        <datalist id="provincias">
+          <option value="Río Negro">
+          <option value="Neuquén">
+          <option value="Chubut">
+          <option value="Santa Cruz">
+          <option value="Tierra del Fuego">
+        </datalist>
+
+        <label for="codigo_postal">Código Postal</label>
+        <input id="codigo_postal" name="codigo_postal" type="text"
+               pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}"
+               title="Formato: A1234ABC (una letra mayúscula, cuatro dígitos y tres letras mayúsculas)">
+        <small>Formato: A1234ABC</small>
+      </fieldset>
+
+      <fieldset>
+        <legend>Suscripción</legend>
+        <p>Elija el tipo de suscripción que desee (puede seleccionar más de una):</p>
+
+        <input type="checkbox" id="sus_noticias" name="suscripcion[]" value="Noticias">
+        <label for="sus_noticias">Noticias</label>
+
+        <input type="checkbox" id="sus_promociones" name="suscripcion[]" value="Promociones">
+        <label for="sus_promociones">Promociones</label>
+
+        <input type="checkbox" id="sus_alertas" name="suscripcion[]" value="Alertas" checked>
+        <label for="sus_alertas">Alertas</label>
+
+        <input type="checkbox" id="sus_eventos" name="suscripcion[]" value="Eventos">
+        <label for="sus_eventos">Eventos</label>
+      </fieldset>
+
+      <input type="button" id="btn-cargar" value="CARGAR" aria-label="Cargar datos del formulario">
+    </form>
+
+    <table id="tabla-datos"  summary="Campos del formulario y valores">
+      <thead>
+        <tr>
+          <th>Campo</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Nombre</td><td></td></tr>
+        <tr><td>Apellido</td><td></td></tr>
+        <tr><td>Edad</td><td></td></tr>
+        <tr><td>E-mail</td><td></td></tr>
+        <tr><td>Teléfono</td><td></td></tr>
+        <tr><td>Dirección</td><td></td></tr>
+        <tr><td>Provincia</td><td></td></tr>
+        <tr><td>Código Postal</td><td></td></tr>
+        <tr><td>Método de Contacto</td><td></td></tr>
+        <tr><td>Suscripción</td><td></td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>© 2025 Belén Ruppel. Monseñor Esandi y Ayacucho. Viedma.</p>
+  </footer>
+    <a href="#top" class="subir">↑</a>
+  <script src="script.js"></script>
+</body>
+</html>
